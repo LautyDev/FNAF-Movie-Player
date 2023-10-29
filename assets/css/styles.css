@@ -1,0 +1,106 @@
+body {
+  background-image: url("../img/background.png");
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Arial", Helvetica, sans-serif;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-bottom: 2px solid #ffa500;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main div h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  -webkit-text-stroke: 0.5px #ffa500;
+  color: transparent;
+  text-shadow: 2px 2px 0 #333;
+}
+
+@media (max-width: 768px) {
+  main div select {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  main div button {
+    width: 100%;
+  }
+}
+
+main div select {
+  font-size: 1.5rem;
+  background-color: #333;
+  color: #ffa500;
+  padding: 10px;
+  border: 2px solid #ffa500;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  width: 300px;
+  text-align: center;
+}
+
+main div select:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+main div select:disabled {
+  background-color: #222;
+  color: #666;
+  cursor: not-allowed;
+}
+
+main div button {
+  font-size: 1.5rem;
+  background-color: #ffa500;
+  color: #333;
+  padding: 10px 20px;
+  border: 2px solid #3330;
+  border-radius: 5px;
+  width: 150px;
+}
+
+main div button:hover {
+  background-color: #ff9900;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #ffa500;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div#name {
+  padding-left: 5px;
+}
+
+footer div#links {
+  padding-right: 5px;
+  display: flex;
+  gap: 12px;
+}
+
+footer div a {
+  color: #ffa500;
+  text-decoration: none;
+}
