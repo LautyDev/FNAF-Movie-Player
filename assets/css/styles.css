@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   font-family: "Arial", Helvetica, sans-serif;
   color: #fff;
+  overflow-y: auto;
 }
 
 main {
@@ -96,7 +97,7 @@ footer div a {
 
 @media (max-width: 768px) {
   main div h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   main div select {

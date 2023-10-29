@@ -11,7 +11,7 @@ startButton.addEventListener("click", function () {
   if (window.innerWidth < 768) {
     return (mainElement.innerHTML = `<iframe src="${
       language[selectElement.value]
-    }" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
+    }" width="480" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
   }
 
   mainElement.innerHTML = `<iframe src="${
