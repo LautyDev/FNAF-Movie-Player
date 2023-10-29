@@ -6,19 +6,15 @@ const language = {
 
 startButton.addEventListener("click", function () {
   const selectElement = document.getElementById("lang");
-
   const mainElement = document.querySelector("main");
-  mainElement.innerHTML = "";
 
-  const iframe = document.createElement("iframe");
-  iframe.src = language[selectElement.value];
-  iframe.width = "750";
-  iframe.height = "580";
-  iframe.frameborder = "0";
-  iframe.webkitallowfullscreen = "true";
-  iframe.mozallowfullscreen = "true";
-  iframe.allowfullscreen = "true";
-  iframe.style.border = "none";
+  if (window.innerWidth < 768) {
+    return (mainElement.innerHTML = `<iframe src="${
+      language[selectElement.value]
+    }" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
+  }
 
-  mainElement.appendChild(iframe);
+  mainElement.innerHTML = `<iframe src="${
+    language[selectElement.value]
+  }" width="750" height="580" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`;
 });
