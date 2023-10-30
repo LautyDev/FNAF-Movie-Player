@@ -15,7 +15,7 @@ startButton.addEventListener("click", function () {
     return (mainElement.innerHTML = `<iframe src="${
       language[selectElement.value]
     }" width="${
-      screenWidth - 20
+      screenWidth - 50
     }" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
   }
 
