@@ -9,8 +9,6 @@ startButton.addEventListener("click", function () {
   const selectElement = document.getElementById("lang");
   const mainElement = document.querySelector("main");
 
-  console.log(selectElement.value, language[selectElement.value]);
-
   const screenWidth = window.innerWidth;
 
   if (screenWidth < 768) {
