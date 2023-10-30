@@ -9,13 +9,15 @@ startButton.addEventListener("click", function () {
   const selectElement = document.getElementById("lang");
   const mainElement = document.querySelector("main");
 
+  console.log(selectElement.value, language[selectElement.value]);
+
   const screenWidth = window.innerWidth;
 
   if (screenWidth < 768) {
     return (mainElement.innerHTML = `<iframe src="${
       language[selectElement.value]
     }" width="${
-      screenWidth - 50
+      screenWidth - 30
     }" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
   }
 
