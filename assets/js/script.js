@@ -1,6 +1,7 @@
 const startButton = document.getElementById("start");
 
 const language = {
+  en: "https://archive.org/embed/fnaf-en",
   es: "https://archive.org/embed/fnaf-es",
 };
 
@@ -8,10 +9,14 @@ startButton.addEventListener("click", function () {
   const selectElement = document.getElementById("lang");
   const mainElement = document.querySelector("main");
 
-  if (window.innerWidth < 768) {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
     return (mainElement.innerHTML = `<iframe src="${
       language[selectElement.value]
-    }" width="400" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
+    }" width="${
+      screenWidth - 20
+    }" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`);
   }
 
   mainElement.innerHTML = `<iframe src="${
